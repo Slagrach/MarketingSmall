@@ -396,7 +396,7 @@ body.lock {
   }
 }
 
-@media (max-width:640px) {
+@media (max-width:760px) {
   .intro__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -420,6 +420,29 @@ body.lock {
   width: 320px;
   height: 2px;
   background: #8b8fff;
+}
+
+@media (max-width:760px) {
+  .intro__left:before {
+    content: none;
+  }
+
+  .intro__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    padding: 0;
+  }
 }
 
 .intro__title {
@@ -461,27 +484,6 @@ body.lock {
 }
 
 @media (max-width:640px) {
-  .intro__left:before {
-    content: none;
-  }
-
-  .intro__left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    padding: 0;
-  }
-
   .intro__title {
     font-size: 30px;
     text-align: center;
@@ -592,11 +594,52 @@ body.lock {
   bottom: 0;
   width: 664px;
   height: 492px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   z-index: 1;
 }
 
 .intro__img img {
   max-width: 100%;
+}
+
+@media (max-width:1366px) {
+  .intro__img {
+    width: 400px;
+    height: 288px;
+    right: -25px;
+  }
+}
+
+@media (max-width:1366px) and (min-width:768px) {
+  .intro__img {
+    width: calc(400px + 264 * (100vw - 768px)/ 598);
+    height: calc(288px + 204 * (100vw - 768px)/ 598);
+    right: calc(-25px + -13 * (100vw - 768px)/ 598);
+  }
+}
+
+@media (max-width:1366px) and (min-width:1366px) {
+  .intro__img {
+    width: 664px;
+    height: 492px;
+    right: -38px;
+  }
+}
+
+@media (max-width:760px) {
+  .intro__img {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .greeting {
@@ -635,36 +678,18 @@ body.lock {
 }
 
 @media (max-width:1366px) {
-  .intro__img {
-    width: 400px;
-    height: 288px;
-    right: -25px;
-  }
-
   .greeting__title {
     font-size: 32px;
   }
 }
 
 @media (max-width:1366px) and (min-width:768px) {
-  .intro__img {
-    width: calc(400px + 264 * (100vw - 768px)/ 598);
-    height: calc(288px + 204 * (100vw - 768px)/ 598);
-    right: calc(-25px + -13 * (100vw - 768px)/ 598);
-  }
-
   .greeting__title {
     font-size: calc(32px + 13 * (100vw - 768px)/ 598);
   }
 }
 
 @media (max-width:1366px) and (min-width:1366px) {
-  .intro__img {
-    width: 664px;
-    height: 492px;
-    right: -38px;
-  }
-
   .greeting__title {
     font-size: 45px;
   }
@@ -725,11 +750,6 @@ body.lock {
 }
 
 @media (max-width:640px) {
-  .intro__img {
-    position: static;
-    width: 100%;
-  }
-
   .greeting__content {
     padding: 40px 0 144px;
   }
@@ -1890,7 +1910,7 @@ body.lock {
 .form__input.error {
   border-color: #dc3545;
   padding-right: calc(1.5em + .75rem);
-  background: right calc(.375em + .1875rem) center/calc(.75em + .375rem) calc(.75em + .375rem) no-repeat,#272e38;
+  background: url("data:image/svg+xml,%3csvg xmlns= 'http://www.w3.org/2000/svg' viewBox= '0 0 12 12' width= '12' height= '12' fill= 'none' stroke= '%23dc3545' %3e%3ccircle cx= '6' cy= '6' r= '4.5' /%3e%3cpath stroke-linejoin= 'round' d= 'M5.8 3.6h.4L6 6.5z' /%3e%3ccircle cx= '6' cy= '8.2' r= '.6' fill= '%23dc3545' stroke= 'none' /%3e%3c/svg%3e") right calc(.375em + .1875rem) center/calc(.75em + .375rem) calc(.75em + .375rem) no-repeat,#272e38;
 }
 
 .form__input.error:focus {
@@ -1902,7 +1922,7 @@ body.lock {
 .form__input.success {
   border-color: #198754;
   padding-right: calc(1.5em + .75rem);
-  background: right calc(.375em + .1875rem) center/calc(.75em + .375rem) calc(.75em + .375rem) no-repeat,#272e38;
+  background: url("data:image/svg+xml,%3csvg xmlns= 'http://www.w3.org/2000/svg' viewBox= '0 0 8 8' %3e%3cpath fill= '%23198754' d= 'M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z' /%3e%3c/svg%3e") right calc(.375em + .1875rem) center/calc(.75em + .375rem) calc(.75em + .375rem) no-repeat,#272e38;
 }
 
 .form__input.success:focus {
