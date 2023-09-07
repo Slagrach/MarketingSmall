@@ -1428,6 +1428,7 @@ body.lock {
 }
 
 .swiper-slide {
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
